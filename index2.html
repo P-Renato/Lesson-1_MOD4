@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 2</title>
+</head>
+<body>
+    <ul id="list"></ul>
+
+
+    <script>
+        // How can I ask the user for multiple inputs?
+
+        // We start by asking the user how many items they want to list
+        let amount = prompt("How many items do you want to list?");
+        console.log(amount);
+        console.log( typeof amount);
+
+        let html = '';
+        for ( let i=0; i < amount; i++) {
+            let item = prompt("Enter item " + (i+1));
+            html += `<li>${item}</li>`;
+        }
+        document.getElementById('list').innerHTML = html;
+
+
+
+        // Using a while loop, prompt the user for a number
+        // Keep prompting until the user enters a valid nem between 2 and 5
+
+        
+        while (true) {
+            let num = prompt("Enter a number between 2 and 5: ");
+            if (num >=2 && num <= 5) {
+                break
+            }
+        }
+        console.log("Bravo");
+    </script>
+
+
+</body>
+</html>

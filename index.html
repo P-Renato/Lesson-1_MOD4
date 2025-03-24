@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro part 1</title>
+
+    <!--
+        There are 2 ways of adding js to a html file
+        - Inline js (within the html file)
+        - External js (linking to an external js file)
+    
+    -->
+        <script>
+            console.log("Hello World");
+            console.log( window);
+            console.log( document);
+
+            /*
+
+            Window
+            Represents browser's window
+            It provides methods such as alert(), confirm(), prompt(), setInterval(), etc.
+            
+            DOCUMENT
+            Represents the html
+            It provides functionalities to interact with the HTML iteself like getElementById(), querySelector(), etc.
+            It allows us to manipulate the HTML structure
+            */
+
+            // Exxperiment 1
+            // Targetting the element by the tag name
+
+            const h1_first = document.querySelector('h1');
+            console.log(h1_first);  // null
+
+
+        /*
+            In the example above the log is showing "null" because the script is executed BEFORE 
+            the <h1> element is available in the DOM.
+        */
+        </script>
+
+
+</head>
+<body>
+    <h1>Greeting <span>Everyone</span></h1>
+    <p>Replace me</p>
+
+
+    <script>
+        const h1_second = document.querySelector('h1');
+        // console.log(h1_second);  
+
+
+        // Changing the text of an element
+        // Let's replace the text of the <p> element
+            const pTag = document.querySelector('p');
+            console.log(pTag);
+            pTag.innerText = "Have a great day";
+
+        // // Grabbing user's input - PROMPT
+        // const name = prompt(" What is your name?");
+        // console.log(name);
+
+        // Displaying message to the page - ALERT
+        // alert(`Hello ${name}!`); 
+        console.log("*****************");
+
+        // Task
+        // Prompt the user to ask for a person to greet and replace the ext in the span with the person's name
+        const user = prompt("Who would you like to greet?");
+        const userName = document.querySelector('span');
+        userName.innerText = user;
+
+
+
+    </script>
+</body>
+</html>
